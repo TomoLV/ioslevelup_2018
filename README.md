@@ -74,6 +74,21 @@ _Workshop:_
 
 **See the workshop assignment [here](Class1/Workshop/workshop1.md).**
 
+### Class 2: Scroll it ∞! UIScrollView
+
+_TODO_
+
+### Class 3: CollectionView i Layout: Napisz swój własny Layout do CollectionView
+
+_TODO_
+
+### Class 4: Store it!: Podstawy Core Data
+
+_TODO_
+
+### Class 5: Instruments 101: Profilowanie aplikacji i naprawa błędów
+
+_TODO_
 
 ## Resources
 
