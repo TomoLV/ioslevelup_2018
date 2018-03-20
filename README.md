@@ -50,6 +50,26 @@ let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut) {
 animator.startAnimation()
 ```
 
+#### Gestures
+
+Touch detetection on iOS is done using the `UIGestureRecognizer` system. It makes it really simple to handle gesture detection. `UIGestureRecognizer` is an abstract class. To add gesture handling you need three basic steps:
+
+1. Instantiate a concrete Gesture Recognizer (for example `UITapGestureRecognizer`) with a target-action.
+2. Optional: configure the gesture
+3. Add your gesture to a view.
+
+Gestures on iOS are handled by the gesture system. Each gesture recognizer instance is responsible for recognizing **one** gesture.
+
+There are two types of `UIGestureRecognizer` subclasses. These are discreet and continous gestures. Each gesture operates using a state machine. Discreet gestures are either recognized or failed (tap, swipe). Continous gestures begin at some point, and take a while to complete (for example a pan – user starts panning, continues for a while, and then lifts off their finger). Each gesture state machine looks as following:
+
+![UIGestureRecognizer State Machine](assets/ui_gesture_recognizer_statee_machine.png)
+
+All gestures start in the state `possible`, and then move either to `failed` or `recognized` (discreet gestures) and `began` (for continous gestures). It's a race condition – whichever recognizer recognizes **first** gets to handle the gesture until it's finished. You can override this behaviour for raw gesture handling using methods like `delaysTouchesBegan` for mixing with raw touch handling, or gesture recognizer delegates for interactions between gestures.
+
+You can also subclass `UIGestureRecognizer` and use its API to create your own gestures. You just have to follow this state machine graph, as well as follow the rule *fail as quickly as possible* (which all gestures should do), and you'll get your own gesture recognizer which just works great with the whole gesture system.
+
+See more [here](https://developer.apple.com/documentation/uikit/uigesturerecognizer).
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
