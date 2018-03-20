@@ -70,6 +70,11 @@ You can also subclass `UIGestureRecognizer` and use its API to create your own g
 
 See more [here](https://developer.apple.com/documentation/uikit/uigesturerecognizer).
 
+_Workshop:_
+
+See the workshop assignment [here](Class%201/Workshop/workshop1.md).
+
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
