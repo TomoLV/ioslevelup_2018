@@ -2,8 +2,6 @@
 
 ![Platforms](https://img.shields.io/badge/platforms-iOS-blue.svg)
 ![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-[![Twitter Follow ](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/mdab121)
-[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/DaftMobile)
 
 # iOS Level Up class – MiMUW, Spring 2018
 
