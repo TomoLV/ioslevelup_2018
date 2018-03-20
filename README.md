@@ -72,7 +72,7 @@ See more [here](https://developer.apple.com/documentation/uikit/uigesturerecogni
 
 _Workshop:_
 
-See the workshop assignment [here](Class%201/Workshop/workshop1.md).
+**See the workshop assignment [here](Class1/Workshop/workshop1.md).**
 
 
 ## Resources
