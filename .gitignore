@@ -108,4 +108,5 @@ fastlane/test_output
 
 Icon?
 **/Solutions
+**/Secret
 *.key
