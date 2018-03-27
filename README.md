@@ -74,7 +74,45 @@ _Workshop:_
 
 ### Class 2: Scroll it ∞! UIScrollView
 
-_TODO_
+#### Simple Scrolling
+
+We talked about `UIScrollView`. It's used throughout UIKit (`UITableView`, `UICollectionView` are subclasses of `UIScrollView`. ScrollViews are used all over Springboard, iOS Home Screen, etc).
+
+To use Scroll View you just need to set one property – its `contentSize: CGSize`. This is the size of the content that the user will be to scroll aroud. Just add your subviews to the ScrollView, and start using it.
+
+The current scroll position of the scroll view is represented by a single point: `contentOffset: CGPoint`. It's the point in the scrollView's coordinate system currently visible in its top left corner.
+
+_Note: Using `UIScrollView` with AutoLayout is a different approach to the one we're taking in this class. To learn how to use `UIScrollView` with AutoLayout, see the [documentation](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithScrollViews.html)._
+
+#### Advanced techniques
+
+If you've ever used `UITableView` before, you probably have used subview tiling. The basic idea is to only load and show the contnent that will be actually visible, instead of the whole view hierarchy.
+
+Sometimes you also want to add some stationary views (views that don't scroll with the content), but you want them to be subviews of the scroll view (for some reason).
+
+In both cases, you need to dynamically manipulate frames of the subviews. There are two methods that you can use to implement tiling and hook up to `UIScrollView` behaviour.
+
+`layoutSubviews` is the `UIScrollView` method that is called on **each frame** of scrolling. You can subclass `UIScrollView` and add your custom logic there.
+
+```swift
+override func layoutSubviews() {
+  super.layoutSubviews()
+  // custom logic here
+}
+```
+
+The second method which is called on **each frame** is the scrollview delegate method `scrollViewDidScroll`. You can use it if you don't want to subclass `UIScrollView` directly and add your logic there.
+
+```swift
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
+  // custom logic here
+}
+```
+
+#### Infinite scrolling
+
+When you're familiar with the techniques described above, it's really straightforward to add things like infinite scrolling. Just position your `contentOffset` in the center of the scrollView's `contentSize`. After the user scrolls for a while, recenter the scrollview (either in `layoutSubviews` or `scrollViewDidScroll`) and move your content by the same amount. As long as you do this in the same call of your run loop, it'll be completely transparent to the user, and they won't be able to see what's going on.
+
 
 ### Class 3: CollectionView i Layout: Napisz swój własny Layout do CollectionView
 
