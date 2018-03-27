@@ -43,7 +43,7 @@ extension UIColor {
 5. Podniesienie i przenoszenie obsłuż przy pomocy `UILongPressGestureRecognizer`
 6. Użyj `UIGestureRecognizerDelegate`, aby synchronizować współpracę gestów ze sobą
 7. Jak zawsze: korzystaj z [dokumentacj](https://developer.apple.com/documentation/uikit/uigesturerecognizer)!
-8. Domyślne zachowanie gestów jest takie, że ten gest który pierwszy przejdzie do stanu `began`/`recognized` – ten wygrywa – reszta dostaje *cancel*. Mechanizm sprawdza się w 90%, ale nie w tym przypadku (kiedy w tej samej hierarchii potrzebujemy obsłużyć tripple tap i double tap). Aby móc rozpoznać gest tripple tap bez rozpoznania wcześniej double tap – należy skorzystać z *failure requirements*. Ten mechanizm interakcji instancji UIGestureRecognizer ze sobą jest obsługiwany przez [UIGestureRecognizerDelegate](https://developer.apple.com/documentation/uikit/uigesturerecognizerdelegate).
+8. Domyślne zachowanie gestów jest takie, że ten gest który pierwszy przejdzie do stanu `began`/`recognized` – ten wygrywa – reszta dostaje *cancel*. Mechanizm sprawdza się w 90%, ale nie w tym przypadku (kiedy w tej samej hierarchii potrzebujemy obsłużyć triple tap i double tap). Aby móc rozpoznać gest triple tap bez rozpoznania wcześniej double tap – należy skorzystać z *failure requirements*. Ten mechanizm interakcji instancji UIGestureRecognizer ze sobą jest obsługiwany przez [UIGestureRecognizerDelegate](https://developer.apple.com/documentation/uikit/uigesturerecognizerdelegate).
 9. Zwróć uwagę, żeby podniesione kółko nie *skakało* zaraz po podniesieniu, jeśli nie złapiemy go za sam środek.
 
 ### Odpowiedzi
