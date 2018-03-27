@@ -51,3 +51,7 @@ extension UIColor {
 Odpowiedź (cały, spakowany w .zip folder projektu) wyślij mailem na adres [email](mailto:michal.dabrowski+workshop1@daftcode.pl) do końca najbliższej soboty: **24.03.2018, 23:59**.
 
 Przypominam, że jest możliwość wykonania zadania w salce na MiMUW. Terminy to **czwartki w godzinach 10:00 - 16:00** oraz **piątki po 16:00**. Przyjdźcie w jednym z tych terminów – administratorzy uruchomią Wam system i będziecie mogli wykonać zadanie.
+
+### Rozwiązanie
+
+Zobacz przykładowe rozwiązanie [tutaj](Solution).
