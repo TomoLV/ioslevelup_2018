@@ -140,7 +140,7 @@ class InfiniteScrollView: UIScrollView {
 
         for (index, image) in visiblePhotos.reversed().enumerated() {
             if image.frame.maxX <= minX || image.frame.minX >= maxX {
-                visiblePhotos.remove(at: index)
+                visiblePhotos.remove(at: visiblePhotos.count - 1 - index)
                 image.removeFromSuperview()
                 recycledViews.insert(image)
             }
