@@ -46,7 +46,7 @@ class InfiniteScrollView: UIScrollView {
     }
 
     func setup(size: CGSize) {
-        contentSize = CGSize(width: size.width * 3, height: size.height)
+        contentSize = CGSize(width: size.width * 5, height: size.height)
         imageContainerView.frame = CGRect(origin: .zero, size: contentSize)
         backgroundColor = .black
         indicatorStyle = .white
@@ -116,10 +116,11 @@ class InfiniteScrollView: UIScrollView {
         let distanceFromCenter = fabs(currentOffset.x - centerOffsetX)
 
         if distanceFromCenter >= bounds.width {
-            contentOffset.x = centerOffsetX
+            let moveBy = floor((currentOffset.x - centerOffsetX) / bounds.width) * bounds.width
+            contentOffset.x -= moveBy
             for image in visiblePhotos {
                 var center = imageContainerView.convert(image.center, to: self)
-                center.x += centerOffsetX - currentOffset.x
+                center.x -= moveBy
                 image.center = convert(center, to: imageContainerView)
             }
         }
@@ -138,12 +139,16 @@ class InfiniteScrollView: UIScrollView {
             firstVisiblePhoto = placeNewPhotoOnTheLeft(index: index(before: firstVisiblePhoto.index), edge: firstVisiblePhoto.frame.minX)
         }
 
-        for (index, image) in visiblePhotos.reversed().enumerated() {
+        var indicesToRemove: [Int] = []
+        for (index, image) in visiblePhotos.enumerated() {
             if image.frame.maxX <= minX || image.frame.minX >= maxX {
-                visiblePhotos.remove(at: visiblePhotos.count - 1 - index)
+                indicesToRemove.append(index)
                 image.removeFromSuperview()
                 recycledViews.insert(image)
             }
+        }
+        for index in indicesToRemove.reversed() {
+            visiblePhotos.remove(at: index)
         }
     }
 }
