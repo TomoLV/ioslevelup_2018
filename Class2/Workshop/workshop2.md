@@ -21,4 +21,7 @@ ScrollView przewija się w pionie na wysokość najwyższego możliwego budynku 
 
 Odpowiedź (cały, spakowany w .zip folder projektu) wyślij mailem na adres [email](mailto:michal.dabrowski+workshop2@daftcode.pl) do końca najbliższej soboty: **31.03.2018, 23:59**.
 
+**Update: Z okazji długiego weekendu przedłużamy termin wysyłania do piątku (06.04) do północy. Kto już wysłał może dosłać wersje poprawione ;)**
+🐣🐰
+
 Przypominam, że jest możliwość wykonania zadania w salce na MiMUW. Terminy to **czwartki w godzinach 10:00 - 16:00** oraz **piątki po 16:00**. Przyjdźcie w jednym z tych terminów – administratorzy uruchomią Wam system i będziecie mogli wykonać zadanie.
