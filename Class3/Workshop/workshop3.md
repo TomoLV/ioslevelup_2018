@@ -22,6 +22,9 @@ Zachowanie aplikacji zaprezentowane jest na załączonym [filmie](film.mov).
 - ad 2. Zastanów się jakie atrubyty musisz przekazać komórkom z layoutu.
 - ad 4. Użyj do tego metody delegate `UIScrollView` (*scrollViewWillEndDragging:withVelocity:targetContentOffset:*)
 - ad 5. `invalidateLayout()`, oraz trzeba policzyć nowy `contentOffset` po rotacji.
+- Dziedzicząc po `UICollectionViewFlowLayout` musisz przeciążyć dwie metody: `layoutAttributesForElementsInRect` oraz `layoutAttributesForItemAtIndexPath`
+- Pamiętaj, że w przypadku naszego `CoverLayout` parametry layoutu zmieniają się w każdej klatce scrollowania (metoda `shouldInvalidateLayoutForBoundsChange`).
+- Dodając nowe właściwości (dziedzicząc po `UICollectionViewLayoutAttributes`) pamiętaj żeby **poprawnie** przeciążyć `copy()` oraz `isEqual`.
 
 ### Odpowiedzi
 
