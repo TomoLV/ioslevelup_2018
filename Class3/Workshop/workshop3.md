@@ -18,10 +18,10 @@ Zachowanie aplikacji zaprezentowane jest na załączonym [filmie](film.mov).
 
 ### Wskazówki
 
-ad 1. Za każdym razem gdy używasz Collection View – krok pierwszy to **zastanów się, czy możesz do tego użyć `UICollectionViewFlowLayout`**.
-ad 2. Zastanów się jakie atrubyty musisz przekazać komórkom z layoutu.
-ad 4. Użyj do tego metody delegate `UIScrollView` (*scrollViewWillEndDragging:withVelocity:targetContentOffset:*)
-ad 5. `invalidateLayout()`, oraz trzeba policzyć nowy `contentOffset` po rotacji.
+- ad 1. Za każdym razem gdy używasz Collection View – krok pierwszy to **zastanów się, czy możesz do tego użyć `UICollectionViewFlowLayout`**.
+- ad 2. Zastanów się jakie atrubyty musisz przekazać komórkom z layoutu.
+- ad 4. Użyj do tego metody delegate `UIScrollView` (*scrollViewWillEndDragging:withVelocity:targetContentOffset:*)
+- ad 5. `invalidateLayout()`, oraz trzeba policzyć nowy `contentOffset` po rotacji.
 
 ### Odpowiedzi
 
