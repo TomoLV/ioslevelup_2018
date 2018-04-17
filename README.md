@@ -114,15 +114,15 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 When you're familiar with the techniques described above, it's really straightforward to add things like infinite scrolling. Just position your `contentOffset` in the center of the scrollView's `contentSize`. After the user scrolls for a while, recenter the scrollview (either in `layoutSubviews` or `scrollViewDidScroll`) and move your content by the same amount. As long as you do this in the same call of your run loop, it'll be completely transparent to the user, and they won't be able to see what's going on.
 
 
-### Class 3: CollectionView i Layout: Napisz swój własny Layout do CollectionView
+### Class 3: Collection View and its Layout
 
 _TODO_
 
-### Class 4: Store it!: Podstawy Core Data
+### Class 4: Store it!: Core Data basics
 
 _TODO_
 
-### Class 5: Instruments 101: Profilowanie aplikacji i naprawa błędów
+### Class 5: Instruments 101: Profiling your app and fixing bugs
 
 _TODO_
 
