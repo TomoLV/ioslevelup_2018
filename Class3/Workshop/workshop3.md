@@ -25,6 +25,6 @@ Zachowanie aplikacji zaprezentowane jest na załączonym [filmie](film.mov).
 
 ### Odpowiedzi
 
-Odpowiedź (cały, spakowany w .zip folder projektu) wyślij mailem na adres [email](mailto:michal.dabrowski+workshop3@daftcode.pl) do końca najbliższej soboty: **14.04.2018, 23:59**.
+Odpowiedź (cały, spakowany w .zip folder projektu) wyślij mailem na adres [email](mailto:michal.dabrowski+workshop3@daftcode.pl) do końca najbliższej soboty: **21.04.2018, 23:59**.
 
 Przypominam, że jest możliwość wykonania zadania w salce na MiMUW. Terminy to **czwartki w godzinach 10:00 - 16:00** oraz **piątki po 16:00**. Przyjdźcie w jednym z tych terminów – administratorzy uruchomią Wam system i będziecie mogli wykonać zadanie.
