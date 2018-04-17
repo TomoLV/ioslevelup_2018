@@ -25,6 +25,7 @@ Zachowanie aplikacji zaprezentowane jest na załączonym [filmie](film.mov).
 - Dziedzicząc po `UICollectionViewFlowLayout` musisz przeciążyć dwie metody: `layoutAttributesForElementsInRect` oraz `layoutAttributesForItemAtIndexPath`
 - Pamiętaj, że w przypadku naszego `CoverLayout` parametry layoutu zmieniają się w każdej klatce scrollowania (metoda `shouldInvalidateLayoutForBoundsChange`).
 - Dodając nowe właściwości (dziedzicząc po `UICollectionViewLayoutAttributes`) pamiętaj żeby **poprawnie** przeciążyć `copy()` oraz `isEqual`.
+- Pamiętaj żeby w swojej `UICollectionViewCell` przeciążyć metodę `applyLayoutAttributes`.
 
 ### Odpowiedzi
 
