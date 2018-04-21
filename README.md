@@ -161,6 +161,12 @@ To subclass a layout (either basic, abstract collection view layout, or flow lay
 
 See more about subclassing [here](https://developer.apple.com/documentation/uikit/uicollectionviewlayout).
 
+##### UICollectionViewLayoutAttributes
+
+This object is the layout attributes that are computed by the layout, for the collection view. Those *objects* are also subclassable – you can add a custom layout property and pass them throught your subclass of `UICollectionViewLayoutAttributes` to your items (like background color for example). Each time you subclass `UICollectionViewLayoutAttributes` remember to override `copy()` and `isEqual` with a valid implementation since they're heavily used by the system.
+
+The layout attributes are computed by the layout and passed to a collection view, and then applied to items in `func apply(_ layoutAttributes: UICollectionViewLayoutAttributes)`. You can override this method to apply your custom attributes.
+
 _Workshop:_
 
 **See the workshop assignment [here](Class3/Workshop/workshop3.md).**
