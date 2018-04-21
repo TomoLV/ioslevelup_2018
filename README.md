@@ -116,7 +116,29 @@ When you're familiar with the techniques described above, it's really straightfo
 
 ### Class 3: Collection View and its Layout
 
-_TODO_
+#### Basics
+
+We've talked (as the class name suggests) about `UICollectionView`. `UICollectionView` was introduced back in iOS 6 as an addition to `UITableView` for displaying collections of data on screen. Collection is not a replacement for a table – you can still use table views, however `UICollectioView` is far more generic and customizable.
+
+#### Hierarchies
+
+There are three sort of view categories that you can put in a Collection View. Those are:
+
+1. Cells – which are obviously data driven. They are the data that you display (could be anything: labels, photos, views...)
+
+2. Supplementary Views - those are data driven as well. They represent sort of a metadata to your cells. In Table View those would be your header and footer views, but here the concept of supplemetary view is far more generic, so they've picked this name instead
+
+3. Decoration Views – those are the decorations. Backgrouds, grids, etc. Everythig that is not strictly data driven – decoration views are layout driven, so they are not configured in Collection View's data source.
+
+Here you have a typical collection view layout and its view hierarchy:
+
+![Collection View hierarchy](assets/collectionview_1.png)
+
+
+_Workshop:_
+
+**See the workshop assignment [here](Class3/Workshop/workshop3.md).**
+
 
 ### Class 4: Store it!: Core Data basics
 
