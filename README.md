@@ -134,6 +134,32 @@ Here you have a typical collection view layout and its view hierarchy:
 
 ![Collection View hierarchy](assets/collectionview_1.png)
 
+#### Providing data
+
+There's the same datasource-based mechanism of providing data to `UICollectioView` as in table view. You set up a data source, and the collection view asks its data source for cell configuration (you use the same cell dequeue mechanism as well).
+
+#### Architecture
+
+![Collection View architecture](assets/collectionview_2.png)
+
+There are more components to a `UICollectionView` than to a `UITableView` since the collection view is **far** more generic and customizable. The main difference is the **LAYOUT** object. The layout is responsible for positioning the views inside `UICollectionView`'s content size (and to be more exact: it's responsible for calculating their *layout attributes* which the collection view later applies).
+
+##### UICollectionViewLayout
+
+The layout object is the most important object that you'll customize to get a custom collection view. It's designed to be sublassable and generic. There are just a few methods that you need to implement to get your collection view a custom layout. But firstly, let's talk about layouts that are provided with `UIKit`.
+
+There's only one layout that is provided out of the box, and it's called `UICollectionViewFlowLayout`. It's also a very customizable and subclassable layout that is designed to be a single scrolling direction, line breaking layout. There's a ton of information online that you can get about flow layout, so I won't get into much detail here (as always, start with the [documentation](https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout)). Generaly speaking, you almost *never* need anything more thatn a flow layout (or a simple subclass).
+
+
+To subclass a layout (either basic, abstract collection view layout, or flow layout) you need to implement these methods:
+
+- `var collectionViewContentSize: CGSize { get }` – pretty self explainatory – you need to calculate how big your collection view is going to be.
+
+- `func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]?` - here you compute the layout attributes (frame, size, alpha, zIndex, etc... + your custom properties) for any element that should be visible in a given rect.
+
+- `func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes?` - same as above, but based on an index path, not on a rect.
+
+See more about subclassing [here](https://developer.apple.com/documentation/uikit/uicollectionviewlayout).
 
 _Workshop:_
 
